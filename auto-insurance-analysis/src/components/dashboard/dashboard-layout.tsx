@@ -9,6 +9,7 @@ import { DataTable } from '@/components/data-table/data-table';
 import { CSVUploader } from '@/components/csv-uploader/CSVUploader';
 import { DataDiscovery } from '@/components/data-discovery/DataDiscovery';
 import { StatsOverview } from '@/components/dashboard/stats-overview';
+import { EnhancedStatsOverview } from '@/components/dashboard/enhanced-stats-overview';
 import { ExportButton } from '@/components/export/export-button';
 import { FilterConditions, InsuranceRecord, AnalysisResult } from '@/types/insurance';
 import { db } from '@/lib/database';
@@ -208,8 +209,9 @@ export function DashboardLayout() {
                 <>
                   {/* 统计概览 */}
                   {summaryStats && (
-                    <StatsOverview 
+                    <EnhancedStatsOverview 
                       stats={summaryStats} 
+                      metricResults={metricResults}
                       totalRecords={totalRecords}
                       loading={loading}
                     />
