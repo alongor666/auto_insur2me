@@ -46,6 +46,9 @@ out/
 *.sqlite
 *.sqlite3
 
+# 项目数据文件
+data/
+
 # 配置文件（可能包含敏感信息）
 config.local.*
 .env.local
